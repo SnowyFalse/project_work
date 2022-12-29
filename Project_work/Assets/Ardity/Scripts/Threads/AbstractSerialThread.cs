@@ -53,6 +53,8 @@ public abstract class AbstractSerialThread
 
     private bool enqueueStatusMessages = false;
 
+    private string objectID;
+
 
     /**************************************************************************
      * Methods intended to be invoked from the Unity thread.
@@ -249,6 +251,7 @@ public abstract class AbstractSerialThread
             object inputMessage = ReadFromWire(serialPort);
             if (inputMessage != null)
             {
+                objectID = inputMessage.ToString();
                 if (inputQueue.Count < maxUnreadMessages)
                 {
                     inputQueue.Enqueue(inputMessage);
