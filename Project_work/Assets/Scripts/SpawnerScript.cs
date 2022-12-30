@@ -11,7 +11,7 @@ public class SpawnerScript : MonoBehaviour
     
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.E))
         {
             // If you want to run the game without the rfid reader uncomment one of the line below
             
