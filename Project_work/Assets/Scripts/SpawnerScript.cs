@@ -13,34 +13,21 @@ public class SpawnerScript : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Debug.Log("Space key pressed with " + objectID);
-            if (objectID.Equals("670093BEAFE5"))
-            {
-                Debug.Log("Spawn cube");
-                Instantiate(cubePrefab, transform.position, Quaternion.identity);
-            } else if (objectID.Equals("67009C404AF1"))
-            {
-                Debug.Log("Spawn sphere");
-                Instantiate(spherePrefab, transform.position, Quaternion.identity);
-            }
-            else
-            {
-                Debug.Log("Something went wrong");
-            }
-            /*
+            
             switch (objectID)
             {
-                case "670093BEAFE5": 
+                case "670093BEAFE5": 
                     Debug.Log("Spawn cube");
                     Instantiate(cubePrefab, transform.position, Quaternion.identity);
                     break;
-                case "67009C404AF1":
+                case "67009C404AF1":
                     Debug.Log("Spawn sphere");
                     Instantiate(spherePrefab, transform.position, Quaternion.identity);
                     break;
+                default:
+                    Debug.Log("Something went wrong");
+                    break;
             }
-            */
-            
         }
     }
 
