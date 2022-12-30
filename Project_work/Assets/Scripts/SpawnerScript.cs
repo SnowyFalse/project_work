@@ -13,6 +13,14 @@ public class SpawnerScript : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            // If you want to run the game without the rfid reader uncomment one of the line below
+            
+            // Uncomment the line below for getting the id for the cube
+            // objectID = "670093BEAFE5";
+            
+            // Uncomment he line below for getting the id for the sphere
+            // objectID = "67009C404AF1";
+            
             
             switch (objectID)
             {
