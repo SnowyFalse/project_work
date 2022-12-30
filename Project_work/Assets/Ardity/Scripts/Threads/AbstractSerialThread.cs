@@ -249,6 +249,7 @@ public abstract class AbstractSerialThread
             object inputMessage = ReadFromWire(serialPort);
             if (inputMessage != null)
             {
+                Debug.Log("Card read with " + inputMessage.ToString());
                 SpawnerScript.objectID = inputMessage.ToString();
                 if (inputQueue.Count < maxUnreadMessages)
                 {
