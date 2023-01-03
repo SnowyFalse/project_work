@@ -28,6 +28,12 @@ public class PlayerMove : MonoBehaviour
         {
             Jump(); 
         }
+
+        if (transform.position.y <= -30)
+        {
+            Debug.Log("Player died... Respawning");  
+            transform.position = new Vector3(0, 1, 0);
+        } 
         
     }
 
