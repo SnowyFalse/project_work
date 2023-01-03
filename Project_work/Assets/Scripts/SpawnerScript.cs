@@ -11,6 +11,9 @@ public class SpawnerScript : MonoBehaviour
     public static string objectID;
     private bool overlayActive = false;
     
+    private Vector3 mousePos;
+    private Vector3 objectPos;
+    
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.E))
@@ -29,19 +32,22 @@ public class SpawnerScript : MonoBehaviour
             // Uncomment he line below for getting the id for the sphere
             // objectID = "67009C404AF1";
 
-
+            mousePos = Input.mousePosition;
+            mousePos.z = 2.0f;
+            objectPos = Camera.main.ScreenToWorldPoint(mousePos);
+            
             switch (objectID)
             {
                 case "670093BEAFE5": 
                     Debug.Log("Spawn cube");
-                    Instantiate(cubePrefab, transform.position, Quaternion.identity);
+                    Instantiate(cubePrefab, objectPos, Quaternion.identity);
                     break;
                 case "67009C404AF1":
                     Debug.Log("Spawn sphere");
-                    Instantiate(spherePrefab, transform.position, Quaternion.identity);
+                    Instantiate(spherePrefab, objectPos, Quaternion.identity);
                     break;
                 default:
-                    Debug.Log("Something went wrong");
+                    Debug.LogError("Something went wrong");
                     break;
             }
         }

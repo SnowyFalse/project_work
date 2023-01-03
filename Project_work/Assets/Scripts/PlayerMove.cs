@@ -51,9 +51,14 @@ public class PlayerMove : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Ground")
+        switch(collision.gameObject.tag)
         {
-            isGrounded = true;
+            case "Ground": 
+                isGrounded = true;
+                break;
+            case "Goal":
+                transform.position = new Vector3(0, 1, 0);
+                break;
         }
     }
 
