@@ -20,7 +20,7 @@ public class SpawnerScript : MonoBehaviour
     public static string objectID;
     
     
-    private bool overlayActive = false;
+    public static bool overlayActive = false;
     
     private Vector3 mousePos;
     private Vector3 objectPos;
@@ -84,9 +84,7 @@ public class SpawnerScript : MonoBehaviour
             
         // Uncomment he line below for getting the id for the sphere
         // objectID = "67009C404AF1";
-        
-        
-        
+
         switch (objectID)
         {
             case "670093BEAFE5":

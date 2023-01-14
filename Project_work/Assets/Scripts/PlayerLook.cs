@@ -25,5 +25,19 @@ public class PlayerLook : MonoBehaviour
 
         transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
         playerBody.Rotate(Vector3.up * mouseX);
+
+        if (Input.GetKeyDown(KeyCode.Mouse1) && SpawnerScript.overlayActive)
+        {
+            RaycastHit hit;
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            if (Physics.Raycast(ray, out hit))
+            {
+                BoxCollider bc = hit.collider as BoxCollider;
+                if (bc != null)
+                {
+                    Destroy(bc.gameObject);
+                }
+            }
+        }
     }
 }
