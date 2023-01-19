@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,11 +9,15 @@ public class HoverScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
 {
 
     public GameObject arrow;
+    public GameObject options_menu;
+    public GameObject start_menu;
+    
+    private bool showOptionsMenu = false;
    
     public void OnPointerEnter(PointerEventData pointerEventData)
     {
         //Output to console the GameObject's name and the following message
-        Debug.Log("Cursor Entering " + name + " GameObject");
+        // Debug.Log("Cursor Entering " + name + " GameObject");
         arrow.SetActive(true);
     }
 
@@ -20,12 +25,32 @@ public class HoverScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     public void OnPointerExit(PointerEventData pointerEventData)
     {
         //Output the following message with the GameObject's name
-        Debug.Log("Cursor Exiting " + name + " GameObject");
-        arrow.SetActive(false);
+        // Debug.Log("Cursor Exiting " + name + " GameObject");
+        if (arrow.tag.Equals("arrow"))
+        {
+            arrow.SetActive(false);  
+        }
+        
     }
 
     public void StartGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
+
+    public void SwitchOptions()
+    {
+        if (options_menu.activeSelf)
+        {
+            options_menu.SetActive(false);
+            start_menu.SetActive(true);
+        }
+        else
+        {
+            options_menu.SetActive(true);
+            start_menu.SetActive(false);
+        }
+        
+    }
+    
 }
