@@ -29,7 +29,9 @@ public class PauseMenu : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
 
     public void RestartGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+        SceneManager.LoadScene(1);
+        SpawnerScript.pauseMenuActive = false;
+        menu.SetActive(false);
     }
 
     public void CloseMenu()

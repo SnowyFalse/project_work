@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class PlayerMove : MonoBehaviour
 {
@@ -57,7 +58,7 @@ public class PlayerMove : MonoBehaviour
                 isGrounded = true;
                 break;
             case "Goal":
-                transform.position = new Vector3(0, 1, 0);
+                SceneManager.LoadScene(2);
                 break;
         }
     }
