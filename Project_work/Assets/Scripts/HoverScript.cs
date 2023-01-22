@@ -9,23 +9,18 @@ public class HoverScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
 {
 
     public GameObject arrow;
-    public GameObject options_menu;
-    public GameObject start_menu;
+    public GameObject optionsMenu;
+    public GameObject startMenu;
     
-    private bool showOptionsMenu = false;
    
     public void OnPointerEnter(PointerEventData pointerEventData)
     {
-        //Output to console the GameObject's name and the following message
-        // Debug.Log("Cursor Entering " + name + " GameObject");
         arrow.SetActive(true);
     }
 
     //Detect when Cursor leaves the GameObject
     public void OnPointerExit(PointerEventData pointerEventData)
     {
-        //Output the following message with the GameObject's name
-        // Debug.Log("Cursor Exiting " + name + " GameObject");
         if (arrow.tag.Equals("arrow"))
         {
             arrow.SetActive(false);  
@@ -40,15 +35,15 @@ public class HoverScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
 
     public void SwitchOptions()
     {
-        if (options_menu.activeSelf)
+        if (optionsMenu.activeSelf)
         {
-            options_menu.SetActive(false);
-            start_menu.SetActive(true);
+            optionsMenu.SetActive(false);
+            startMenu.SetActive(true);
         }
         else
         {
-            options_menu.SetActive(true);
-            start_menu.SetActive(false);
+            optionsMenu.SetActive(true);
+            startMenu.SetActive(false);
         }
         
     }

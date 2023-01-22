@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -16,20 +17,31 @@ public class SpawnerScript : MonoBehaviour
     public GameObject overlay;
     public GameObject cubeOutline;
     public GameObject sphereOutline;
+    public GameObject pauseMenu;
     
     public static string objectID;
     
     
     public static bool overlayActive = false;
-    
+    public static bool pauseMenuActive = false;
+
     private Vector3 mousePos;
     private Vector3 objectPos;
-    
+
+
+    // private void Start()
+    // {
+    //     var pause = pauseMenu.GetComponentInParent<PauseMenu>();
+    //     pause.parent = this;
+    // }
+
     void Update()
     {
         Objects currentObject = CheckObjectId(objectID);
         
-        if (Input.GetKeyDown(KeyCode.E))
+        
+        
+        if (Input.GetKeyDown(KeyCode.E) && !pauseMenuActive)
         {
             overlayActive = !overlayActive;
             overlay.SetActive(overlayActive);
@@ -64,6 +76,29 @@ public class SpawnerScript : MonoBehaviour
                     break;
             }
         }
+
+        if (Input.GetKeyDown(KeyCode.Escape) && !overlayActive)
+        {
+            pauseMenuActive = !pauseMenuActive;
+
+        }
+        
+        HandlePauseMenu();
+    }
+
+    private void HandlePauseMenu()
+    {
+        pauseMenu.SetActive(pauseMenuActive);
+        if (!pauseMenuActive)
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Time.timeScale = 1;
+        }
+        else
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Time.timeScale = 0;
+        }
     }
 
     private Objects CheckObjectId(string objectID)
@@ -71,10 +106,10 @@ public class SpawnerScript : MonoBehaviour
         // If you want to run the game without the rfid reader uncomment one of the line below
             
         // Uncomment the line below for getting the id for the cube
-        //objectID = "670093BEAFE5";
+        objectID = "011396FAC8B6";
             
         // Uncomment he line below for getting the id for the sphere
-        // objectID = "67009C404AF1";
+        // objectID = "011396EA523C";
 
         switch (objectID)
         {
