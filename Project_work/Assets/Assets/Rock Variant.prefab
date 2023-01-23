@@ -55,6 +55,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 471a96a6674c8da4fb500d3184e432bb, type: 3}
+      propertyPath: m_TagString
+      value: Object
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 471a96a6674c8da4fb500d3184e432bb, type: 3}
 --- !u!1 &6189255854347971429 stripped
@@ -91,3 +95,16 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.010294865
   m_Center: {x: -0.01625851, y: 0.025029592, z: 0.00083689234}
+--- !u!114 &-8287696708268987318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6189255854347971429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8725b5ddeb3fa9b4ca6bc9042ae27f57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  winCounter: 0

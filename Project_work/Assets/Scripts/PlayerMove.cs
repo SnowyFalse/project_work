@@ -57,8 +57,18 @@ public class PlayerMove : MonoBehaviour
             case "Ground": 
                 isGrounded = true;
                 break;
+            case "Object": 
+                isGrounded = true;
+                break;
             case "Goal":
-                SceneManager.LoadScene(2);
+                if (WinCounter.canWin)
+                {
+                    SceneManager.LoadScene(2);
+                }
+                else
+                {
+                    Debug.Log("You need to fulfill the win condition");
+                }
                 break;
         }
     }

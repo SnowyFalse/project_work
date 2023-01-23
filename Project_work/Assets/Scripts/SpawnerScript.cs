@@ -109,7 +109,7 @@ public class SpawnerScript : MonoBehaviour
         objectID = "011396FAC8B6";
             
         // Uncomment he line below for getting the id for the sphere
-        // objectID = "011396EA523C";
+        //objectID = "011396EA523C";
 
         switch (objectID)
         {

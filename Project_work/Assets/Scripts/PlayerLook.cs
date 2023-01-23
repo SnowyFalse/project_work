@@ -32,8 +32,14 @@ public class PlayerLook : MonoBehaviour
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out hit))
             {
-                BoxCollider bc = hit.collider as BoxCollider;
-                if (bc != null)
+                Collider bc = hit.collider;
+                // if (bc is BoxCollider boxCollider)
+                // {
+                //     boxCollider.
+                // }
+                
+                Debug.Log("Tag: " + bc.tag);
+                if (bc != null && bc.CompareTag("Object"))
                 {
                     Destroy(bc.gameObject);
                 }

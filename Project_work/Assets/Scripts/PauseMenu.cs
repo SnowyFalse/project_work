@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,7 +10,12 @@ public class PauseMenu : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
     public GameObject arrow;
     public GameObject menu;
 
-    
+    public void Start()
+    {
+        Debug.Log("LOG ME " + Cursor.lockState);
+        Cursor.lockState = CursorLockMode.None;
+    }
+
     public void OnPointerEnter(PointerEventData pointerEventData)
     {
         

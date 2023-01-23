@@ -8,6 +8,8 @@ TagManager:
   - Goal
   - menu
   - arrow
+  - counter
+  - Object
   layers:
   - Default
   - TransparentFX
