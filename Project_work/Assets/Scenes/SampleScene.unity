@@ -2918,7 +2918,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cubePrefab: {fileID: 1368430861303016514, guid: 4397860d57fbaec4a8e8c604d9cc5c73, type: 3}
-  spherePrefab: {fileID: 2640240675950192341, guid: c8413a561a79c57459d9c0708a3f0aa4, type: 3}
+  spherePrefab: {fileID: 3986592937101288498, guid: 6067cc3c2892e2046b6cb930b0633276, type: 3}
   overlay: {fileID: 1013165119}
   cubeOutline: {fileID: 237368173}
   sphereOutline: {fileID: 577718070}

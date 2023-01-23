@@ -27,6 +27,7 @@ public class WinCounter : MonoBehaviour
     {
         if(collision.gameObject.tag.Equals("Object"))
         {
+            Debug.Log("winCounter: " + winCounter);
             winCounter++;
         }
     }
