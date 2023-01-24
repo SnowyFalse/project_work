@@ -80,7 +80,10 @@ public class SpawnerScript : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape) && !overlayActive)
         {
             pauseMenuActive = !pauseMenuActive;
-
+        } else if (overlayActive && Input.GetKeyDown(KeyCode.Escape))
+        {
+            overlayActive = !overlayActive;
+            overlay.SetActive(overlayActive);
         }
         
         HandlePauseMenu();

@@ -619,7 +619,7 @@ GameObject:
   - component: {fileID: 305868697}
   - component: {fileID: 305868696}
   m_Layer: 5
-  m_Name: Image
+  m_Name: RockImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1592,6 +1592,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   winCounter: 0
   rockCounter: {fileID: 1596138629}
+  rockImage: {fileID: 305868694}
 --- !u!1 &903929687
 GameObject:
   m_ObjectHideFlags: 0
@@ -2190,6 +2191,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   winCounter: 0
   rockCounter: {fileID: 0}
+  rockImage: {fileID: 0}
 --- !u!1 &1110802125
 GameObject:
   m_ObjectHideFlags: 0

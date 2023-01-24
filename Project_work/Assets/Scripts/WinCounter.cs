@@ -9,6 +9,7 @@ public class WinCounter : MonoBehaviour
     
     public int winCounter = 0;
     public Text rockCounter;
+    public GameObject rockImage;
 
     public static bool canWin = false;
 
@@ -23,6 +24,16 @@ public class WinCounter : MonoBehaviour
         else
         {
             rockCounter.text = winCounter + "/2 in position";
+        }
+
+        if (SpawnerScript.overlayActive || SpawnerScript.pauseMenuActive)
+        {
+            rockCounter.text = "";
+            rockImage.SetActive(false);
+        }
+        else
+        {
+            rockImage.SetActive(true);
         }
     }
     
