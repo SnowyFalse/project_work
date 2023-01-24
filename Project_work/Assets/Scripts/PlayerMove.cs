@@ -32,6 +32,8 @@ public class PlayerMove : MonoBehaviour
 
         if (transform.position.y <= -30)
         {
+            FindObjectOfType<AudioManager>().Play("Player Respawn");
+            
             Debug.Log("Player died... Respawning");  
             transform.position = new Vector3(0, 1, 0);
         } 
