@@ -56,6 +56,7 @@ public class SpawnerScript : MonoBehaviour
         {
             cubeOutline.SetActive(false);
             sphereOutline.SetActive(false);
+            stairsOutline.SetActive(false);
         }
 
         if (overlayActive && Input.GetKeyDown(KeyCode.Mouse0))
@@ -76,7 +77,6 @@ public class SpawnerScript : MonoBehaviour
                     break;
                 case Objects.STAIRS:
                     Instantiate(stairsPrefab, objectPos, Quaternion.identity);
-                    stairsPrefab.transform.Rotate(-180f, -180f, -180f);
                     break;
                 default:
                     Debug.LogError("Something went wrong");
