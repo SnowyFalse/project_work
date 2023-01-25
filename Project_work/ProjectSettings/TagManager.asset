@@ -10,6 +10,7 @@ TagManager:
   - arrow
   - counter
   - Object
+  - puzzle_ground
   layers:
   - Default
   - TransparentFX

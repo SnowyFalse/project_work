@@ -45,5 +45,10 @@ public class WinCounter : MonoBehaviour
             Debug.Log("winCounter: " + winCounter);
             FindObjectOfType<AudioManager>().Play("Trap activated");
         }
+
+        if (collision.gameObject.tag.Equals("puzzleGround"))
+        {
+            FindObjectOfType<AudioManager>().Play("Trap activated");
+        }
     }
 }
