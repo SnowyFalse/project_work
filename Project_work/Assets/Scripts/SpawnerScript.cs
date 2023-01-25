@@ -76,6 +76,7 @@ public class SpawnerScript : MonoBehaviour
                     break;
                 case Objects.STAIRS:
                     Instantiate(stairsPrefab, objectPos, Quaternion.identity);
+                    stairsPrefab.transform.Rotate(-180f, -180f, -180f);
                     break;
                 default:
                     Debug.LogError("Something went wrong");

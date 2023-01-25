@@ -6005,7 +6005,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cubePrefab: {fileID: 4076555683237435747, guid: f528204a40be4ba48950c6a5c76ab95a, type: 3}
   spherePrefab: {fileID: 6815638998924277154, guid: 52c9624948d241046b87c8bf6ec073a8, type: 3}
-  stairsPrefab: {fileID: 5819270661733776553, guid: 86a07af5f78005b4386de1e8baa573f2, type: 3}
+  stairsPrefab: {fileID: 7055811005298837942, guid: ad8a1f505d43bfc4bb3c1203717350f8, type: 3}
   overlay: {fileID: 1013165119}
   cubeOutline: {fileID: 237368173}
   sphereOutline: {fileID: 577718070}
