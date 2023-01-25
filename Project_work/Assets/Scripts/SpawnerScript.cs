@@ -7,6 +7,7 @@ enum Objects
 {
     CUBE,
     SPHERE,
+    STAIRS,
     NONE
 }
 public class SpawnerScript : MonoBehaviour
@@ -14,9 +15,11 @@ public class SpawnerScript : MonoBehaviour
     
     public GameObject cubePrefab;
     public GameObject spherePrefab;
+    public GameObject stairsPrefab;
     public GameObject overlay;
     public GameObject cubeOutline;
     public GameObject sphereOutline;
+    public GameObject stairsOutline;
     public GameObject pauseMenu;
     
     public static string objectID;
@@ -66,12 +69,13 @@ public class SpawnerScript : MonoBehaviour
             switch (currentObject)
             {
                 case Objects.CUBE: 
-                    Debug.Log("Spawn cube");
                     Instantiate(cubePrefab, objectPos, Quaternion.identity);
                     break;
                 case Objects.SPHERE:
-                    Debug.Log("Spawn sphere");
                     Instantiate(spherePrefab, objectPos, Quaternion.identity);
+                    break;
+                case Objects.STAIRS:
+                    Instantiate(stairsPrefab, objectPos, Quaternion.identity);
                     break;
                 default:
                     Debug.LogError("Something went wrong");
@@ -123,12 +127,22 @@ public class SpawnerScript : MonoBehaviour
                 {
                     cubeOutline.SetActive(true);
                     sphereOutline.SetActive(false);
+                    stairsOutline.SetActive(false);
                 }
                 return Objects.CUBE;
             case "011396EA523C":
                 if (overlayActive)
                 {
                     sphereOutline.SetActive(true);
+                    cubeOutline.SetActive(false);
+                    stairsOutline.SetActive(false);
+                }
+                return Objects.SPHERE;
+            case "011396EA623C":
+                if (overlayActive)
+                {
+                    stairsOutline.SetActive(true);
+                    sphereOutline.SetActive(false);
                     cubeOutline.SetActive(false);
                 }
                 return Objects.SPHERE;
