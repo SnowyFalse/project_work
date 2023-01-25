@@ -118,11 +118,11 @@ public class SpawnerScript : MonoBehaviour
         // objectID = "011396FAC8B6";
             
         // Uncomment he line below for getting the id for the sphere
-        objectID = "011396EA523C";
+        // objectID = "011396EA523C";
 
         switch (objectID)
         {
-            case "011396FAC8B6":
+            case "0419CE7ACA63":
                 if (overlayActive)
                 {
                     cubeOutline.SetActive(true);
@@ -130,22 +130,22 @@ public class SpawnerScript : MonoBehaviour
                     stairsOutline.SetActive(false);
                 }
                 return Objects.CUBE;
-            case "011396EA523C":
+            case "0419CD56C94F":
                 if (overlayActive)
-                {
+                { 
                     sphereOutline.SetActive(true);
                     cubeOutline.SetActive(false);
                     stairsOutline.SetActive(false);
                 }
                 return Objects.SPHERE;
-            case "011396EA623C":
+            case "0419CE7BD27A":
                 if (overlayActive)
                 {
                     stairsOutline.SetActive(true);
                     sphereOutline.SetActive(false);
                     cubeOutline.SetActive(false);
                 }
-                return Objects.SPHERE;
+                return Objects.STAIRS;
             default:
                 return Objects.NONE;
         }

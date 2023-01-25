@@ -42,7 +42,7 @@ public class PlayerMove : MonoBehaviour
 
     void Run()
     {
-        FindObjectOfType<AudioManager>().Play("Player Walk");
+        //FindObjectOfType<AudioManager>().Play("Player Walk");
         Vector3 playerVelocity = new Vector3(moveInput.x * walkSpeed, rb.velocity.y, moveInput.y * walkSpeed);
         rb.velocity = transform.TransformDirection(playerVelocity);
         
