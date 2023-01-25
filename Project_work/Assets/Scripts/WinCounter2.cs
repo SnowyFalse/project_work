@@ -4,9 +4,8 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class WinCounter : MonoBehaviour
+public class WinCounter2 : MonoBehaviour
 {
-    /*
     public int winCounter;
     public int overallWinCounter;
     
@@ -41,7 +40,6 @@ public class WinCounter : MonoBehaviour
         }
     }
     
-    
     void OnCollisionEnter(Collision collision)
     {
         if(collision.gameObject.tag.Equals("Object"))
@@ -56,5 +54,4 @@ public class WinCounter : MonoBehaviour
             FindObjectOfType<AudioManager>().Play("Trap activated");
         }
     }
-    */
 }

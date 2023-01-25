@@ -74,7 +74,7 @@ public class PlayerMove : MonoBehaviour
                 isGrounded = true;
                 break;
             case "Goal":
-                if (WinCounter.canWin)
+                if (WinCounter2.canWin)
                 {
                     SceneManager.LoadScene(2);
                 }
