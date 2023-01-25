@@ -43,6 +43,7 @@ public class SpawnerScript : MonoBehaviour
         
         if (Input.GetKeyDown(KeyCode.E) && !pauseMenuActive)
         {
+            FindObjectOfType<AudioManager>().Play("Spawn overlay");
             overlayActive = !overlayActive;
             overlay.SetActive(overlayActive);
             
@@ -56,6 +57,7 @@ public class SpawnerScript : MonoBehaviour
 
         if (overlayActive && Input.GetKeyDown(KeyCode.Mouse0))
         {
+            FindObjectOfType<AudioManager>().Play("Spawn object");
             
             mousePos = Input.mousePosition;
             mousePos.z = 2.0f;
