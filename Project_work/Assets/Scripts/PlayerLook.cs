@@ -32,12 +32,9 @@ public class PlayerLook : MonoBehaviour
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out hit))
             {
+                FindObjectOfType<AudioManager>().Play("Erase object");
                 SphereCollider bc = hit.collider as SphereCollider;
-                // if (bc is BoxCollider boxCollider)
-                // {
-                //     boxCollider.
-                // }
-                
+
                 Debug.Log("Tag: " + bc.tag);
                 if (bc != null && bc.CompareTag("Object"))
                 {

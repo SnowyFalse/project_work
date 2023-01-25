@@ -42,12 +42,15 @@ public class PlayerMove : MonoBehaviour
 
     void Run()
     {
+        FindObjectOfType<AudioManager>().Play("Player Walk");
         Vector3 playerVelocity = new Vector3(moveInput.x * walkSpeed, rb.velocity.y, moveInput.y * walkSpeed);
         rb.velocity = transform.TransformDirection(playerVelocity);
+        //FindObjectOfType<AudioManager>().Stop("Player Walk");
     }
 
     void Jump()
     {
+        FindObjectOfType<AudioManager>().Play("Player Jump");
         rb.AddForce(new Vector3(0, jumpPower, 0), ForceMode.Impulse);
         isGrounded = false;
     }

@@ -43,6 +43,7 @@ public class WinCounter : MonoBehaviour
         {
             winCounter++;
             Debug.Log("winCounter: " + winCounter);
+            FindObjectOfType<AudioManager>().Play("Trap activated");
         }
     }
 }

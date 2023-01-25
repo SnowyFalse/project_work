@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2232,6 +2232,36 @@ MonoBehaviour:
     volume: 1
     pitch: 1
     source: {fileID: 0}
+  - name: Player Walk
+    clip: {fileID: 8300000, guid: df33c39a3356d31439bce17e6ef11ada, type: 3}
+    volume: 0.193
+    pitch: 1
+    source: {fileID: 0}
+  - name: Player Jump
+    clip: {fileID: 8300000, guid: c43800f1d170eb947840437901430811, type: 3}
+    volume: 0.214
+    pitch: 1
+    source: {fileID: 0}
+  - name: Spawn object
+    clip: {fileID: 8300000, guid: 7c9bdd7f7de43ac45b54dcf070f89a99, type: 3}
+    volume: 0.787
+    pitch: 1
+    source: {fileID: 0}
+  - name: Erase object
+    clip: {fileID: 8300000, guid: 7c9bdd7f7de43ac45b54dcf070f89a99, type: 3}
+    volume: 0.641
+    pitch: 1
+    source: {fileID: 0}
+  - name: Spawn overlay
+    clip: {fileID: 8300000, guid: 0d128870b76c1c14cbe7d0b36f04f088, type: 3}
+    volume: 0.478
+    pitch: 1
+    source: {fileID: 0}
+  - name: Trap activated
+    clip: {fileID: 8300000, guid: 95f015fb807083f4894c2bbce9a26b91, type: 3}
+    volume: 0.551
+    pitch: 1
+    source: {fileID: 0}
 --- !u!4 &988695656
 Transform:
   m_ObjectHideFlags: 0
@@ -3460,6 +3490,7 @@ GameObject:
   - component: {fileID: 1656033742}
   - component: {fileID: 1656033748}
   - component: {fileID: 1656033747}
+  - component: {fileID: 1656033749}
   m_Layer: 0
   m_Name: PlayerObject
   m_TagString: Untagged
@@ -3608,6 +3639,102 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   walkSpeed: 10
   jumpPower: 5
+--- !u!82 &1656033749
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1656033741}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 9c6da4be4747f214e945123d5f1de199, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.23
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1695624118
 GameObject:
   m_ObjectHideFlags: 0
